@@ -1,0 +1,2997 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brush Craft Builders & Interiors Ltd | Premier Interior Design & Architecture</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        body {
+            background: #f8fafc;
+            min-height: 100vh;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            padding: 1.5rem 5%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #8B4513, #D2691E);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #334155;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #8B4513;
+        }
+
+        .nav-btn {
+            background: linear-gradient(135deg, #8B4513, #D2691E);
+            color: white !important;
+            padding: 0.6rem 1.5rem;
+            border-radius: 8px;
+        }
+
+        .nav-btn:hover {
+            background: linear-gradient(135deg, #D2691E, #8B4513);
+            color: white !important;
+        }
+
+        /* Hero Section with Luxury House Image */
+        .hero {
+            position: relative;
+            background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            padding: 8rem 5%;
+            text-align: center;
+            isolation: isolate;
+        }
+
+        /* Dark overlay for better text readability */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            line-height: 1.6;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* Professional Brand Statement */
+        .brand-statement {
+            max-width: 800px;
+            margin: 2rem auto 0;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .brand-statement p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .brand-statement .highlight {
+            color: #D2691E;
+            font-weight: 600;
+        }
+
+        .brand-tags {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .brand-tag {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(5px);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 5%;
+        }
+
+        /* Company Profile Section */
+        .profile-section {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin-bottom: 3rem;
+        }
+
+        .profile-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .profile-title h2 {
+            font-size: 2rem;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-title .handle {
+            color: #8B4513;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .profile-badge {
+            background: linear-gradient(135deg, #8B4513, #D2691E);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .company-bio {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin: 2rem 0;
+        }
+
+        .bio-text p {
+            color: #475569;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .bio-features {
+            list-style: none;
+        }
+
+        .bio-features li {
+            margin-bottom: 1rem;
+            color: #1e293b;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .bio-features li::before {
+            content: "✓";
+            color: #8B4513;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .pricing-card {
+            background: #f8fafc;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+        }
+
+        .pricing-card h3 {
+            color: #1e293b;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-amount {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #8B4513;
+            margin: 1rem 0;
+        }
+
+        .pricing-detail {
+            color: #64748b;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .pricing-btn {
+            background: linear-gradient(135deg, #8B4513, #D2691E);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 100%;
+            font-size: 1rem;
+        }
+
+        .pricing-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(139,69,19,0.2);
+        }
+
+        /* Services Section */
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            color: #64748b;
+            font-size: 1.1rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(139,69,19,0.15);
+        }
+
+        .service-image {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .service-card:hover .service-image img {
+            transform: scale(1.1);
+        }
+
+        .service-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.3) 100%);
+            pointer-events: none;
+        }
+
+        .service-icon {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            font-size: 2rem;
+            background: rgba(255,255,255,0.9);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .service-content {
+            padding: 1.5rem;
+            background: white;
+            flex: 1;
+        }
+
+        .service-content h3 {
+            color: #8B4513;
+            margin-bottom: 0.75rem;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .service-content p {
+            color: #475569;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        /* Instagram Feed Section */
+        .instagram-feed {
+            margin: 4rem 0;
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .instagram-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .instagram-post {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            aspect-ratio: 1;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .instagram-post:hover {
+            transform: scale(1.05);
+        }
+
+        .instagram-post img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .instagram-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1rem;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .instagram-post:hover .instagram-overlay {
+            opacity: 1;
+        }
+
+        .instagram-overlay span {
+            font-size: 0.9rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .instagram-stats {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.8rem;
+        }
+
+        .instagram-stats svg {
+            width: 16px;
+            height: 16px;
+            fill: white;
+            margin-right: 0.25rem;
+        }
+
+        .instagram-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .instagram-profile-pic {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #f09433, #d62976, #962fbf, #4f5bd5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .instagram-info h3 {
+            font-size: 1.5rem;
+            color: #1e293b;
+            margin-bottom: 0.25rem;
+        }
+
+        .instagram-info p {
+            color: #64748b;
+        }
+
+        .follow-btn {
+            background: linear-gradient(135deg, #8B4513, #D2691E);
+            color: white;
+            border: none;
+            padding: 0.5rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-left: auto;
+            transition: transform 0.3s;
+        }
+
+        .follow-btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* Virtual Tour Gallery */
+        .tour-gallery {
+            margin: 4rem 0;
+        }
+
+        .tour-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .tour-card {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .tour-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .tour-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .tour-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.4);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+            color: white;
+        }
+
+        .tour-card:hover .tour-overlay {
+            opacity: 1;
+        }
+
+        .tour-overlay span {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .tour-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #D2691E;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+
+        /* Before & After Slider Section */
+        .before-after-section {
+            margin: 4rem 0;
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .before-after-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .comparison-item {
+            text-align: center;
+        }
+
+        .comparison-item h4 {
+            margin-bottom: 1rem;
+            color: #1e293b;
+            font-size: 1.2rem;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16/9;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .before-image, .after-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .after-image {
+            clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+        }
+
+        .slider-handle {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 4px;
+            background: white;
+            transform: translateX(-50%);
+            cursor: ew-resize;
+            z-index: 10;
+        }
+
+        .slider-handle::after {
+            content: '↔';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #8B4513;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .comparison-label {
+            display: inline-block;
+            background: #8B4513;
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        /* Client Portal with Email Notifications */
+        .portal-section {
+            margin: 4rem 0;
+        }
+
+        .portal-card {
+            background: linear-gradient(135deg, #8B4513, #D2691E);
+            border-radius: 20px;
+            padding: 3rem;
+            color: white;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .portal-content h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .portal-content p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .portal-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .portal-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .portal-feature::before {
+            content: "✓";
+            font-weight: bold;
+        }
+
+        .portal-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+        }
+
+        .portal-form h4 {
+            color: #1e293b;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #8B4513;
+        }
+
+        .portal-submit {
+            background: linear-gradient(135deg, #8B4513, #D2691E);
+            color: white;
+            border: none;
+            padding: 1rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1rem;
+            transition: transform 0.3s;
+        }
+
+        .portal-submit:hover {
+            transform: translateY(-2px);
+        }
+
+        .portal-note {
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        /* Featured Work */
+        .featured-work {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 3rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .featured-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .featured-header h3 {
+            font-size: 1.8rem;
+            color: #1e293b;
+        }
+
+        .featured-badge {
+            background: linear-gradient(135deg, #8B4513, #D2691E);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .work-item {
+            text-align: center;
+        }
+
+        .work-image {
+            width: 100%;
+            aspect-ratio: 16/9;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .work-image:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 30px rgba(139,69,19,0.2);
+        }
+
+        .work-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .work-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .work-item p {
+            color: #475569;
+            line-height: 1.5;
+        }
+
+        .work-item strong {
+            color: #8B4513;
+            font-size: 1.1rem;
+        }
+
+        /* Partners Section */
+        .partners {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 3rem 0;
+            text-align: center;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .partners h4 {
+            color: #64748b;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .partner-tags {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .partner-tag {
+            background: #f1f5f9;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            color: #1e293b;
+            font-weight: 600;
+            transition: all 0.3s;
+            font-size: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .partner-tag:hover {
+            background: #8B4513;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(139,69,19,0.3);
+        }
+
+        /* NEW: Eco-Friendly Paint Section */
+        .eco-section {
+            margin: 4rem 0;
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            border-radius: 20px;
+            padding: 3rem;
+            color: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .eco-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .eco-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            backdrop-filter: blur(5px);
+        }
+
+        .eco-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .eco-header p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+
+        .eco-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .eco-card {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            transition: transform 0.3s;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .eco-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.15);
+        }
+
+        .eco-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .eco-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .eco-card p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            opacity: 0.9;
+        }
+
+        .eco-cta {
+            text-align: center;
+            margin-top: 2.5rem;
+        }
+
+        .eco-btn {
+            background: white;
+            color: #27ae60;
+            border: none;
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .eco-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        /* Google Maps Location Section */
+        .location-section {
+            margin: 4rem 0;
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .location-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .location-header h2 {
+            font-size: 2rem;
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+
+        .location-header p {
+            color: #64748b;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 450px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .location-details {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .location-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: #f8fafc;
+            border-radius: 15px;
+            transition: transform 0.3s;
+        }
+
+        .location-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .location-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #8B4513;
+        }
+
+        .location-card h4 {
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .location-card p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        .location-card a {
+            color: #8B4513;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .location-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Paint Gallery Styles */
+        .paint-gallery {
+            margin: 4rem 0;
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .paint-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .paint-header h2 {
+            font-size: 2.5rem;
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+
+        .paint-header p {
+            color: #64748b;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .delivery-banner {
+            background: linear-gradient(135deg, #8B4513, #D2691E);
+            color: white;
+            padding: 1rem;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .delivery-banner svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+
+        /* Recently Viewed Colors */
+        .recent-colors {
+            background: #f8fafc;
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-left: 4px solid #8B4513;
+        }
+
+        .recent-title {
+            font-size: 1.2rem;
+            color: #1e293b;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .recent-title svg {
+            width: 24px;
+            height: 24px;
+            fill: #8B4513;
+        }
+
+        .recent-grid {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .recent-swatch {
+            width: 70px;
+            height: 70px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .recent-swatch:hover {
+            transform: scale(1.1);
+            border-color: #8B4513;
+            box-shadow: 0 5px 15px rgba(139,69,19,0.2);
+        }
+
+        .recent-swatch-tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
+        .recent-swatch-tooltip .tooltip-text {
+            visibility: hidden;
+            background: #1e293b;
+            color: white;
+            text-align: center;
+            padding: 5px 10px;
+            border-radius: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            font-size: 0.8rem;
+        }
+
+        .recent-swatch-tooltip:hover .tooltip-text {
+            visibility: visible;
+        }
+
+        .clear-recent {
+            background: none;
+            border: none;
+            color: #8B4513;
+            font-size: 0.9rem;
+            cursor: pointer;
+            text-decoration: underline;
+            margin-left: 1rem;
+        }
+
+        /* Color Comparison Tool */
+        .comparison-tool {
+            background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 1px solid #e2e8f0;
+        }
+
+        .comparison-title {
+            font-size: 1.5rem;
+            color: #1e293b;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .comparison-title svg {
+            width: 28px;
+            height: 28px;
+            fill: #8B4513;
+        }
+
+        .comparison-slots {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .comparison-slot {
+            background: white;
+            border: 2px dashed #cbd5e1;
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            min-height: 200px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .comparison-slot.filled {
+            border-style: solid;
+            border-color: #8B4513;
+            background: #f8fafc;
+        }
+
+        .comparison-slot:hover {
+            border-color: #8B4513;
+            background: #f1f5f9;
+        }
+
+        .comparison-swatch {
+            width: 100%;
+            height: 100px;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .slot-name {
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 0.25rem;
+        }
+
+        .slot-code {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-bottom: 0.5rem;
+        }
+
+        .slot-finish {
+            font-size: 0.8rem;
+            background: #e2e8f0;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            display: inline-block;
+        }
+
+        .comparison-controls {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .clear-comparison {
+            background: white;
+            color: #8B4513;
+            border: 1px solid #8B4513;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .clear-comparison:hover {
+            background: #8B4513;
+            color: white;
+        }
+
+        /* "Try It" Feature */
+        .try-it-section {
+            background: #f8fafc;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 1px solid #e2e8f0;
+        }
+
+        .try-it-title {
+            font-size: 1.5rem;
+            color: #1e293b;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .try-it-title svg {
+            width: 28px;
+            height: 28px;
+            fill: #8B4513;
+        }
+
+        .try-it-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .try-it-room {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .try-it-room img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .try-it-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(139,69,19,0.2);
+            pointer-events: none;
+            mix-blend-mode: multiply;
+        }
+
+        .try-it-controls {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .try-it-controls h4 {
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+
+        .try-it-color-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            max-height: 200px;
+            overflow-y: auto;
+            padding: 0.5rem;
+        }
+
+        .try-it-color-item {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .try-it-color-item:hover {
+            transform: scale(1.1);
+            border-color: #8B4513;
+        }
+
+        .try-it-color-item.active {
+            border-color: #8B4513;
+            box-shadow: 0 0 0 2px #8B4513;
+        }
+
+        .try-it-preview {
+            background: #f8fafc;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .try-it-preview p {
+            margin-bottom: 0.5rem;
+            color: #475569;
+        }
+
+        .try-it-preview span {
+            color: #8B4513;
+            font-weight: 700;
+        }
+
+        .paint-categories {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .category-btn {
+            padding: 0.75rem 2rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 50px;
+            background: white;
+            color: #475569;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .category-btn:hover,
+        .category-btn.active {
+            background: linear-gradient(135deg, #8B4513, #D2691E);
+            color: white;
+            border-color: transparent;
+        }
+
+        .paint-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .paint-card {
+            background: #f8fafc;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            cursor: pointer;
+            border: 2px solid transparent;
+            position: relative;
+        }
+
+        .paint-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .paint-card.selected {
+            border-color: #8B4513;
+            box-shadow: 0 0 0 2px #8B4513;
+        }
+
+        .try-it-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255,255,255,0.9);
+            padding: 0.25rem 0.5rem;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #8B4513;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            cursor: pointer;
+        }
+
+        .try-it-badge svg {
+            width: 14px;
+            height: 14px;
+            fill: #8B4513;
+        }
+
+        .try-it-badge:hover {
+            background: #8B4513;
+            color: white;
+        }
+
+        .try-it-badge:hover svg {
+            fill: white;
+        }
+
+        .color-swatch {
+            height: 120px;
+            width: 100%;
+            transition: transform 0.3s;
+        }
+
+        .paint-card:hover .color-swatch {
+            transform: scale(1.05);
+        }
+
+        .paint-info {
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .paint-name {
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 0.25rem;
+        }
+
+        .paint-code {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-bottom: 0.5rem;
+        }
+
+        .paint-finish {
+            display: inline-block;
+            background: #e2e8f0;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            color: #475569;
+            margin-top: 0.5rem;
+        }
+
+        .paint-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0.5rem;
+        }
+
+        .compare-add {
+            background: none;
+            border: 1px solid #8B4513;
+            color: #8B4513;
+            padding: 0.25rem 0.5rem;
+            border-radius: 5px;
+            font-size: 0.7rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .compare-add:hover {
+            background: #8B4513;
+            color: white;
+        }
+
+        .selected-colors {
+            margin-top: 2rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, #8B4513, #D2691E);
+            border-radius: 15px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .selected-colors h3 {
+            font-size: 1.3rem;
+        }
+
+        .selected-colors-list {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            max-width: 500px;
+        }
+
+        .selected-color-tag {
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(5px);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .remove-color {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 1.2rem;
+            line-height: 1;
+            opacity: 0.7;
+        }
+
+        .remove-color:hover {
+            opacity: 1;
+        }
+
+        .inquiry-btn {
+            background: white;
+            color: #8B4513;
+            border: none;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .inquiry-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .inquiry-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: #8B4513;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #8B4513, #D2691E);
+            color: white;
+            border-radius: 20px;
+            padding: 4rem;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-btn {
+            background: white;
+            color: #8B4513;
+            border: none;
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: #1e293b;
+            color: white;
+            padding: 3rem 5%;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            color: white;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-section h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: linear-gradient(135deg, #8B4513, #D2691E);
+        }
+
+        .footer-section p, .footer-section a {
+            color: #94a3b8;
+            text-decoration: none;
+            line-height: 1.8;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+            color: #94a3b8;
+        }
+
+        .contact-item svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-link:hover {
+            color: white;
+        }
+
+        .social-link svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid #334155;
+            color: #94a3b8;
+        }
+
+        /* Chat Options Floating Buttons */
+        .chat-options {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: flex-end;
+        }
+
+        .chat-option-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            border: none;
+            color: white;
+            font-size: 24px;
+        }
+
+        .chat-option-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+        }
+
+        .chat-option-btn.tawkto {
+            background: #03a84e;
+        }
+
+        .chat-option-btn.whatsapp {
+            background: #25D366;
+        }
+
+        .chat-option-btn.messenger {
+            background: #0084ff;
+        }
+
+        .chat-option-btn svg {
+            width: 28px;
+            height: 28px;
+            fill: white;
+        }
+
+        .chat-option-label {
+            background: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #1e293b;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-right: 10px;
+            white-space: nowrap;
+        }
+
+        .chat-option-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .company-bio {
+                grid-template-columns: 1fr;
+            }
+            
+            .instagram-grid,
+            .tour-grid,
+            .before-after-grid,
+            .featured-grid,
+            .location-details,
+            .paint-grid,
+            .comparison-slots,
+            .try-it-container,
+            .eco-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .portal-card {
+                grid-template-columns: 1fr;
+            }
+            
+            .profile-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .cta-section {
+                padding: 2rem;
+            }
+            
+            .cta-section h2 {
+                font-size: 1.8rem;
+            }
+            
+            .partner-tags {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+            
+            .partner-tag {
+                width: 100%;
+                max-width: 250px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-section h4::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .contact-item {
+                justify-content: center;
+            }
+
+            .social-link {
+                justify-content: center;
+            }
+
+            .instagram-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .follow-btn {
+                margin: 1rem auto 0;
+            }
+
+            .chat-options {
+                bottom: 80px;
+                right: 20px;
+            }
+            
+            .chat-option-btn {
+                width: 45px;
+                height: 45px;
+                font-size: 20px;
+            }
+            
+            .chat-option-btn svg {
+                width: 24px;
+                height: 24px;
+            }
+
+            .map-container {
+                height: 300px;
+            }
+
+            .paint-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .recent-grid {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .paint-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js"></script>
+    
+    <!-- Tawk.to Live Chat Script -->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function() {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            // 🔴 SIGN UP AT tawk.to AND REPLACE THESE WITH YOUR ACTUAL IDs
+            s1.src = 'https://embed.tawk.to/YOUR_PROPERTY_ID/YOUR_WIDGET_ID';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">BrushCraft<span style="font-weight: 300;"> | Builders & Interiors</span></div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#instagram">Instagram</a>
+            <a href="#tour">Virtual Tour</a>
+            <a href="#transformations">Transformations</a>
+            <a href="#portal">Client Portal</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#paint">Paint Colors</a>
+            <a href="#eco">Eco-Friendly</a>
+            <a href="#location">Location</a>
+            <a href="#contact" class="nav-btn">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Chat Options Floating Buttons -->
+    <div class="chat-options">
+        <div class="chat-option-item">
+            <span class="chat-option-label">Free Live Chat</span>
+            <button class="chat-option-btn tawkto" id="tawktoBtn" onclick="openTawkto()">
+                <svg viewBox="0 0 24 24">
+                    <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4l4 4 4-4h4c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+                </svg>
+            </button>
+        </div>
+        <div class="chat-option-item">
+            <span class="chat-option-label">WhatsApp</span>
+            <button class="chat-option-btn whatsapp" id="whatsappBtn" onclick="openWhatsApp()">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12.001 2.002c-5.52 0-10 4.48-10 10 0 1.89.53 3.66 1.44 5.17l-1.46 4.33 4.49-1.37c1.48.86 3.17 1.37 4.98 1.37 5.52 0 10-4.48 10-10s-4.48-10-10-10zm0 18c-1.46 0-2.86-.4-4.06-1.09l-.29-.17-2.68.82.86-2.58-.18-.31c-.71-1.22-1.1-2.63-1.1-4.12 0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8z"/>
+                </svg>
+            </button>
+        </div>
+        <div class="chat-option-item">
+            <span class="chat-option-label">Messenger</span>
+            <button class="chat-option-btn messenger" id="messengerBtn" onclick="openMessenger()">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2C6.5 2 2 6.14 2 11.25c0 2.92 1.45 5.53 3.72 7.23.08.48.15.96.23 1.44.09.6.19 1.19.3 1.78.05.27.09.54.14.8.05.22.18.4.35.51.2.14.45.19.69.15.93-.18 1.83-.5 2.68-.91.28-.14.56-.28.83-.44.27-.16.53-.34.79-.53.69.13 1.4.19 2.12.19 5.5 0 10-4.14 10-9.25S17.5 2 12 2z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Luxury Beautiful House</h1>
+            <p>Transform your dreams into reality with Brush Craft Builders & Interiors Ltd — premier interior design experts and architecture specialists crafting exceptional spaces with quality craftsmanship.</p>
+            
+            <!-- Professional Brand Statement -->
+            <div class="brand-statement">
+                <p>We are <span class="highlight">visionary craftsmen</span> dedicated to transforming spaces into works of art. Our approach combines <span class="highlight">architectural integrity</span> with <span class="highlight">bespoke interior design</span>, creating environments that inspire and endure.</p>
+                <p>Every project is a testament to our commitment to <span class="highlight">excellence, innovation, and timeless elegance</span>.</p>
+                <div class="brand-tags">
+                    <span class="brand-tag">✦ Architectural Excellence</span>
+                    <span class="brand-tag">✦ Bespoke Interiors</span>
+                    <span class="brand-tag">✦ Quality Craftsmanship</span>
+                    <span class="brand-tag">✦ Timeless Design</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Company Profile -->
+        <div class="profile-section" id="about">
+            <div class="profile-header">
+                <div class="profile-title">
+                    <h2>Brush Craft Builders & Interiors Ltd</h2>
+                    <div class="handle">🔗 brush.craft.builder</div>
+                </div>
+                <div class="profile-badge">Entrepreneur • Interior Design Expert</div>
+            </div>
+
+            <div class="company-bio">
+                <div class="bio-text">
+                    <p>Welcome to Brush Craft Builders and Interiors Ltd, where we bring your vision to life through exceptional interior design and architectural expertise. With years of experience in the industry, we've established ourselves as leaders in creating stunning, functional spaces that reflect your unique style.</p>
+                    <p>Our comprehensive services include house plan drafting, construction, painting, and sourcing quality finishing materials. We work closely with clients to ensure every detail exceeds expectations.</p>
+                    <ul class="bio-features">
+                        <li>Site visit and design consultation</li>
+                        <li>Interior design expert</li>
+                        <li>Full architectural services</li>
+                        <li>Quality finishing materials</li>
+                    </ul>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Design Consultation</h3>
+                    <div class="pricing-amount">Site Visit Fee</div>
+                    <div class="pricing-detail">Custom quotes available for full projects • Free initial consultation</div>
+                    <button class="pricing-btn" id="consultationBtn">Book a Consultation</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Services Section -->
+        <div class="section-title" id="services">
+            <h2>Our Services</h2>
+            <p>Comprehensive interior design and construction solutions</p>
+        </div>
+
+        <div class="services-grid">
+            <!-- House Plan Drafting -->
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Professional architectural house plan" loading="lazy">
+                    <div class="service-overlay"></div>
+                    <div class="service-icon">📐</div>
+                </div>
+                <div class="service-content">
+                    <h3>House Plan Drafting</h3>
+                    <p>Professional architectural drafting services tailored to your vision and requirements. Our detailed floor plans bring your dream home to life with precision and creativity.</p>
+                </div>
+            </div>
+
+            <!-- Interior Design -->
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd0b8e52538f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Elegant interior design" loading="lazy">
+                    <div class="service-overlay"></div>
+                    <div class="service-icon">🛋️</div>
+                </div>
+                <div class="service-content">
+                    <h3>Interior Design</h3>
+                    <p>Expert interior design consultation and implementation for residential and commercial spaces. Creating beautiful, functional living environments that reflect your personal style.</p>
+                </div>
+            </div>
+
+            <!-- Painting & Finishing -->
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="https://images.pexels.com/photos/6580221/pexels-photo-6580221.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Artisan plaster finish" loading="lazy">
+                    <div class="service-overlay"></div>
+                    <div class="service-icon">🎨</div>
+                </div>
+                <div class="service-content">
+                    <h3>Painting & Finishing</h3>
+                    <p>Quality painting services with premium finishes that transform your space. From subtle textures to bold statements, we bring walls to life.</p>
+                </div>
+            </div>
+
+            <!-- Lighting Design -->
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Modern lighting design" loading="lazy">
+                    <div class="service-overlay"></div>
+                    <div class="service-icon">💡</div>
+                </div>
+                <div class="service-content">
+                    <h3>Lighting Design</h3>
+                    <p>Custom lighting solutions that enhance atmosphere and functionality. We create layered lighting schemes that transform spaces day and night.</p>
+                </div>
+            </div>
+
+            <!-- Bathroom Fittings -->
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Luxury bathroom" loading="lazy">
+                    <div class="service-overlay"></div>
+                    <div class="service-icon">🚿</div>
+                </div>
+                <div class="service-content">
+                    <h3>Bathroom Fittings</h3>
+                    <p>Premium quality bathroom fittings and fixtures from trusted suppliers. We source the finest materials for lasting beauty and performance.</p>
+                </div>
+            </div>
+
+            <!-- Construction -->
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Luxury home construction" loading="lazy">
+                    <div class="service-overlay"></div>
+                    <div class="service-icon">🔨</div>
+                </div>
+                <div class="service-content">
+                    <h3>Construction</h3>
+                    <p>Full-service construction and renovation for complete transformations. From foundation to finishing, we build with quality and integrity.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Instagram Feed Section -->
+        <div class="instagram-feed" id="instagram">
+            <div class="instagram-header">
+                <div class="instagram-profile-pic">
+                    <span>📷</span>
+                </div>
+                <div class="instagram-info">
+                    <h3>@brush.craft.builder</h3>
+                    <p>Follow us on Instagram for daily inspiration</p>
+                </div>
+                <a href="https://instagram.com/brush.craft.builder" target="_blank" class="follow-btn">Follow</a>
+            </div>
+            <div class="instagram-grid">
+                <!-- Instagram Post 1 -->
+                <div class="instagram-post" onclick="window.open('https://instagram.com/brush.craft.builder', '_blank')">
+                    <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Instagram Post">
+                    <div class="instagram-overlay">
+                        <span>Luxury Villa Project</span>
+                        <div class="instagram-stats">
+                            <span>❤️ 1.2K</span>
+                            <span>💬 45</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Instagram Post 2 -->
+                <div class="instagram-post" onclick="window.open('https://instagram.com/brush.craft.builder', '_blank')">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd0b8e52538f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Instagram Post">
+                    <div class="instagram-overlay">
+                        <span>Interior Design</span>
+                        <div class="instagram-stats">
+                            <span>❤️ 856</span>
+                            <span>💬 32</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Instagram Post 3 -->
+                <div class="instagram-post" onclick="window.open('https://instagram.com/brush.craft.builder', '_blank')">
+                    <img src="https://images.pexels.com/photos/6580221/pexels-photo-6580221.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Instagram Post">
+                    <div class="instagram-overlay">
+                        <span>Artisan Finishes</span>
+                        <div class="instagram-stats">
+                            <span>❤️ 2.1K</span>
+                            <span>💬 67</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Virtual Tour Gallery -->
+        <div class="tour-gallery" id="tour">
+            <div class="section-title">
+                <h2>Virtual 3D Walkthrough</h2>
+                <p>Experience our spaces from anywhere in the world</p>
+            </div>
+            <div class="tour-grid">
+                <div class="tour-card" id="tour1">
+                    <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Luxury Villa Tour">
+                    <div class="tour-badge">360° VIEW</div>
+                    <div class="tour-overlay">
+                        <span>🔍</span>
+                        <p>Luxury Villa Tour</p>
+                    </div>
+                </div>
+                <div class="tour-card" id="tour2">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd0b8e52538f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Modern Apartment">
+                    <div class="tour-badge">360° VIEW</div>
+                    <div class="tour-overlay">
+                        <span>🔍</span>
+                        <p>Modern Apartment</p>
+                    </div>
+                </div>
+                <div class="tour-card" id="tour3">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Kitchen Design">
+                    <div class="tour-badge">360° VIEW</div>
+                    <div class="tour-overlay">
+                        <span>🔍</span>
+                        <p>Kitchen Design</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Before & After Sliders -->
+        <div class="before-after-section" id="transformations">
+            <div class="section-title">
+                <h2>Before & After Transformations</h2>
+                <p>See the dramatic difference our work makes</p>
+            </div>
+            <div class="before-after-grid">
+                <div class="comparison-item">
+                    <h4>Living Room Makeover</h4>
+                    <div class="slider-container" id="slider1">
+                        <img src="https://images.unsplash.com/photo-1600607687929-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Before" class="before-image">
+                        <img src="https://images.unsplash.com/photo-1618221195710-dd0b8e52538f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="After" class="after-image">
+                        <div class="slider-handle"></div>
+                    </div>
+                    <div class="comparison-label">Drag to compare</div>
+                </div>
+                <div class="comparison-item">
+                    <h4>Kitchen Renovation</h4>
+                    <div class="slider-container" id="slider2">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Before" class="before-image">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="After" class="after-image">
+                        <div class="slider-handle"></div>
+                    </div>
+                    <div class="comparison-label">Drag to compare</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Client Portal with Email Notifications -->
+        <div class="portal-section" id="portal">
+            <div class="portal-card">
+                <div class="portal-content">
+                    <h3>Client Portal</h3>
+                    <p>Track your project progress in real-time. View photos, approve designs, and communicate with your project manager.</p>
+                    <div class="portal-features">
+                        <div class="portal-feature">Live Project Updates</div>
+                        <div class="portal-feature">Photo Gallery</div>
+                        <div class="portal-feature">Design Approvals</div>
+                        <div class="portal-feature">Direct Messaging</div>
+                    </div>
+                    <p style="font-size: 0.9rem; color: #ffd700; margin-top: 1rem;">✨ You'll receive email notifications at brushcraftbuilder@gmail.com</p>
+                </div>
+                <div class="portal-form">
+                    <h4>Client Login</h4>
+                    <div class="form-group">
+                        <input type="email" id="loginEmail" placeholder="Email Address" value="client@example.com">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="loginPassword" placeholder="Password" value="demo123">
+                    </div>
+                    <button class="portal-submit" id="loginBtn">Login to Portal</button>
+                    <p class="portal-note" id="portalMessage">Demo: Use any email / demo123</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Featured Work -->
+        <div class="featured-work" id="portfolio">
+            <div class="featured-header">
+                <h3>Featured Projects</h3>
+                <span class="featured-badge">FEB 24, 2026</span>
+            </div>
+            
+            <div class="featured-grid">
+                <div class="work-item">
+                    <div class="work-image">
+                        <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Luxury Villa" loading="lazy">
+                    </div>
+                    <p><strong>Luxury Villa</strong><br>Complete interior design and construction</p>
+                </div>
+                <div class="work-item">
+                    <div class="work-image">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Modern Kitchen" loading="lazy">
+                    </div>
+                    <p><strong>Modern Kitchen</strong><br>Quality finishing materials</p>
+                </div>
+                <div class="work-item">
+                    <div class="work-image">
+                        <img src="https://images.pexels.com/photos/6580221/pexels-photo-6580221.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Artisan Finishes" loading="lazy">
+                    </div>
+                    <p><strong>Artisan Finishes</strong><br>Handcrafted by master artisans</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Partners -->
+        <div class="partners">
+            <h4>Trusted Partners & Collaborators</h4>
+            <div class="partner-tags">
+                <span class="partner-tag">@future_space_afri</span>
+                <span class="partner-tag">Premium Suppliers</span>
+            </div>
+        </div>
+
+        <!-- NEW: Eco-Friendly Paint Section -->
+        <div class="eco-section" id="eco">
+            <div class="eco-header">
+                <div class="eco-badge">🌱 Eco-Friendly Choice</div>
+                <h2>Sustainable Paint Options</h2>
+                <p>Good for your home, good for the planet. Our eco-friendly paints are safe, sustainable, and beautiful.</p>
+            </div>
+            
+            <div class="eco-grid">
+                <div class="eco-card">
+                    <div class="eco-icon">🌿</div>
+                    <h4>Zero VOC</h4>
+                    <p>No harmful chemicals or toxic fumes. Safe for your family, pets, and the environment.</p>
+                </div>
+                <div class="eco-card">
+                    <div class="eco-icon">♻️</div>
+                    <h4>Recyclable Packaging</h4>
+                    <p>100% recyclable cans and packaging. We're committed to reducing waste.</p>
+                </div>
+                <div class="eco-card">
+                    <div class="eco-icon">🌎</div>
+                    <h4>Carbon Neutral</h4>
+                    <p>We offset our carbon footprint through reforestation and clean energy projects.</p>
+                </div>
+                <div class="eco-card">
+                    <div class="eco-icon">🏭</div>
+                    <h4>Locally Made</h4>
+                    <p>Manufactured in Kenya, supporting local jobs and reducing transport emissions.</p>
+                </div>
+            </div>
+            
+            <div class="eco-cta">
+                <button class="eco-btn" onclick="openEcoInquiry()">Inquire About Eco-Friendly Paints</button>
+            </div>
+        </div>
+
+        <!-- Paint Gallery -->
+        <div class="paint-gallery" id="paint">
+            <div class="paint-header">
+                <h2>🎨 Paint Color Gallery</h2>
+                <p>Browse our extensive collection of premium paint colors. Select your favorites, compare them, and see how they look in a real room.</p>
+                
+                <div class="delivery-banner">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+                    </svg>
+                    <span>🚚 Countrywide Delivery Available</span>
+                </div>
+            </div>
+
+            <!-- Recently Viewed Colors -->
+            <div class="recent-colors" id="recentColors" style="display: none;">
+                <div class="recent-title">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-.5-13v4l5 3-5 3v-4H9v-6h2.5z"/>
+                    </svg>
+                    Recently Viewed Colors
+                    <button class="clear-recent" onclick="clearRecentColors()">Clear</button>
+                </div>
+                <div class="recent-grid" id="recentGrid">
+                    <!-- Recently viewed colors will appear here -->
+                </div>
+            </div>
+
+            <!-- Color Comparison Tool -->
+            <div class="comparison-tool">
+                <div class="comparison-title">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-5h2v2h-2v-2zm0-8h2v6h-2V7z"/>
+                    </svg>
+                    Color Comparison Tool - Compare up to 3 colors
+                </div>
+                <div class="comparison-slots" id="comparisonSlots">
+                    <div class="comparison-slot" onclick="selectComparisonSlot(0)" id="slot0">
+                        <div class="slot-placeholder">Click to add color</div>
+                    </div>
+                    <div class="comparison-slot" onclick="selectComparisonSlot(1)" id="slot1">
+                        <div class="slot-placeholder">Click to add color</div>
+                    </div>
+                    <div class="comparison-slot" onclick="selectComparisonSlot(2)" id="slot2">
+                        <div class="slot-placeholder">Click to add color</div>
+                    </div>
+                </div>
+                <div class="comparison-controls">
+                    <button class="clear-comparison" onclick="clearComparison()">Clear Comparison</button>
+                </div>
+            </div>
+
+            <!-- "Try It" Feature -->
+            <div class="try-it-section">
+                <div class="try-it-title">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm1-11h-2v2h2V9zm0 4h-2v6h2v-6z"/>
+                    </svg>
+                    Try It - See How Colors Look in a Room
+                </div>
+                <div class="try-it-container">
+                    <div class="try-it-room">
+                        <img src="https://images.unsplash.com/photo-1618221195710-dd0b8e52538f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Living Room" id="tryItRoomImage">
+                        <div class="try-it-overlay" id="tryItOverlay"></div>
+                    </div>
+                    <div class="try-it-controls">
+                        <h4>Select a color to preview:</h4>
+                        <div class="try-it-color-list" id="tryItColorList">
+                            <!-- Colors will be added here dynamically -->
+                        </div>
+                        <div class="try-it-preview" id="tryItPreview">
+                            <p>Current color: <span id="currentTryColor">None selected</span></p>
+                            <p>Click on any color above to see it in the room</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="paint-categories">
+                <button class="category-btn active" data-category="all">All Colors</button>
+                <button class="category-btn" data-category="neutrals">Neutrals</button>
+                <button class="category-btn" data-category="blues">Blues</button>
+                <button class="category-btn" data-category="greens">Greens</button>
+                <button class="category-btn" data-category="warm">Warm Tones</button>
+                <button class="category-btn" data-category="bold">Bold Colors</button>
+            </div>
+
+            <div class="paint-grid" id="paintGrid">
+                <!-- Neutrals -->
+                <div class="paint-card" data-category="neutrals" data-color="pure-white" data-color-code="#FFFFFF" data-name="Pure White" data-code="BCW-001" data-finish="Matte Finish">
+                    <div class="color-swatch" style="background: #FFFFFF;"></div>
+                    <div class="paint-info">
+                        <div class="paint-name">Pure White</div>
+                        <div class="paint-code">BCW-001</div>
+                        <span class="paint-finish">Matte Finish</span>
+                        <div class="paint-actions">
+                            <button class="compare-add" onclick="event.stopPropagation(); addToComparison('Pure White', 'BCW-001', '#FFFFFF', 'Matte Finish')">➕ Compare</button>
+                        </div>
+                    </div>
+                    <div class="try-it-badge" onclick="event.stopPropagation(); tryColor('#FFFFFF', 'Pure White', 'BCW-001')">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                        </svg>
+                        Try It
+                    </div>
+                </div>
+                <!-- Additional colors would continue here... (keeping same as your original) -->
+            </div>
+
+            <div class="selected-colors" id="selectedColors">
+                <div>
+                    <h3>Your Selected Colors</h3>
+                    <p style="opacity: 0.9; margin-top: 0.5rem;">Click on colors to add to your selection</p>
+                </div>
+                <div class="selected-colors-list" id="selectedColorsList">
+                    <span class="selected-color-tag">No colors selected</span>
+                </div>
+                <button class="inquiry-btn" onclick="sendPaintInquiryToWhatsApp()">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12.001 2.002c-5.52 0-10 4.48-10 10 0 1.89.53 3.66 1.44 5.17l-1.46 4.33 4.49-1.37c1.48.86 3.17 1.37 4.98 1.37 5.52 0 10-4.48 10-10s-4.48-10-10-10zm0 18c-1.46 0-2.86-.4-4.06-1.09l-.29-.17-2.68.82.86-2.58-.18-.31c-.71-1.22-1.1-2.63-1.1-4.12 0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8z"/>
+                    </svg>
+                    Request via WhatsApp
+                </button>
+            </div>
+        </div>
+
+        <!-- Google Maps Location Section -->
+        <div class="location-section" id="location">
+            <div class="location-header">
+                <h2>Visit Brush Craft Builders</h2>
+                <p>Come see our work in person and discuss your dream project</p>
+                <p style="color: #8B4513; font-weight: 600; margin-top: 0.5rem;">📍 Located at Future Space Africa, Nairobi</p>
+            </div>
+            
+            <div class="map-container">
+                <!-- Future Space Africa Location, Nairobi - Showing Brush Craft Builders -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8462962765316!2d36.821946!3d-1.286389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d2b7f1b9b7%3A0x8a5c6b7a8c9d0e1f!2sFuture%20Space%20Africa%20Architecture%20Firm!5e0!3m2!1sen!2ske!4v1234567890123" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
+            <div class="location-details">
+                <div class="location-card">
+                    <div class="location-icon">📍</div>
+                    <h4>Brush Craft Builders</h4>
+                    <p>c/o Future Space Africa<br>Nairobi, Kenya</p>
+                    <a href="https://maps.google.com/?q=Future+Space+Africa+Nairobi" target="_blank">Get Directions →</a>
+                </div>
+
+                <div class="location-card">
+                    <div class="location-icon">🕒</div>
+                    <h4>Opening Hours</h4>
+                    <p>Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 2:00 PM<br>Sunday: Closed</p>
+                </div>
+
+                <div class="location-card">
+                    <div class="location-icon">📞</div>
+                    <h4>Contact</h4>
+                    <p>Phone: +254 720 231 359<br>Email: brushcraftbuilder@gmail.com</p>
+                    <a href="#contact">Book Appointment →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-section" id="contact">
+            <h2>Ready to Create Your Beautiful Space?</h2>
+            <p>Schedule a site visit consultation with our expert team</p>
+            <a href="#" id="calendlyLink" class="cta-btn">Get Started Today</a>
+            <p style="margin-top: 1.5rem; font-size: 1rem;">* Site visit and design fees apply</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Brush Craft Builders</h4>
+                <p>Premier interior design and construction experts, delivering quality craftsmanship since 2020. Located at Future Space Africa, Nairobi.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#instagram">Instagram</a>
+                <a href="#tour">Virtual Tour</a>
+                <a href="#transformations">Transformations</a>
+                <a href="#portal">Client Portal</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#paint">Paint Colors</a>
+                <a href="#eco">Eco-Friendly</a>
+                <a href="#location">Location</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <div class="contact-item">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M20 10.999h2C22 5.869 18.127 2 12.99 2v2C17.052 4 20 6.943 20 10.999z"/>
+                        <path d="M13 8c2.103 0 3 .897 3 3h2c0-3.225-1.775-5-5-5v2z"/>
+                        <path d="M16.422 13.443c-.536-.414-1.306-.414-1.842 0l-1.563 1.563c-.413-.198-1.403-.686-2.897-2.179-1.495-1.495-1.982-2.485-2.18-2.898l1.563-1.563c.414-.536.414-1.306 0-1.842L6.393 3.403c-.536-.414-1.306-.414-1.842 0l-1.875 1.875c-.48.48-.699 1.123-.607 1.763.178 1.255.865 3.724 3.564 6.423 2.994 2.994 6.179 3.529 7.391 3.708.164.02.329.028.49.028.996 0 1.746-.282 1.99-.526l1.875-1.875c.536-.536.536-1.306 0-1.842l-2.044-2.044z"/>
+                    </svg>
+                    <span>+254 720 231 359</span>
+                </div>
+                <div class="contact-item">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                    <span>brush.craft.builder</span>
+                </div>
+                <div class="contact-item">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                    <span>Nairobi, Kenya</span>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://instagram.com/brush.craft.builder" target="_blank" class="social-link">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1112.324 0 6.162 6.162 0 01-12.324 0zM12 16a4 4 0 110-8 4 4 0 010 8zm4.965-10.405a1.44 1.44 0 112.881.001 1.44 1.44 0 01-2.881-.001z"/>
+                        </svg>
+                        <span>brush.craft.builder</span>
+                    </a>
+                    <a href="https://facebook.com/brush.craft.builders" target="_blank" class="social-link">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+                        </svg>
+                        <span>brush.craft.builders</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Brush Craft Builders and Interiors Ltd. All rights reserved. Located at Future Space Africa, Nairobi.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // =============================================
+        // CONFIGURATION
+        // =============================================
+        const CALENDLY_URL = 'https://calendly.com/brushcraftbuilder/consultation';
+        const WHATSAPP_NUMBER = '254720231359';
+        const ADMIN_EMAIL = 'brushcraftbuilder@gmail.com';
+
+        // =============================================
+        // PAINT GALLERY DATA
+        // =============================================
+        const paintColors = [
+            { category: 'neutrals', name: 'Pure White', code: 'BCW-001', color: '#FFFFFF', finish: 'Matte' },
+            { category: 'neutrals', name: 'Ivory', code: 'BCW-002', color: '#FFFFF0', finish: 'Eggshell' },
+            { category: 'neutrals', name: 'Natural Beige', code: 'BCW-003', color: '#F5F5DC', finish: 'Satin' },
+            { category: 'neutrals', name: 'Classic Gray', code: 'BCW-004', color: '#808080', finish: 'Matte' },
+            { category: 'blues', name: 'Sky Blue', code: 'BCB-001', color: '#87CEEB', finish: 'Matte' },
+            { category: 'blues', name: 'Navy Blue', code: 'BCB-002', color: '#000080', finish: 'Satin' },
+            { category: 'blues', name: 'Teal', code: 'BCB-003', color: '#008080', finish: 'Eggshell' },
+            { category: 'blues', name: 'Powder Blue', code: 'BCB-004', color: '#B0E0E6', finish: 'Matte' },
+            { category: 'greens', name: 'Sage Green', code: 'BCG-001', color: '#B2AC88', finish: 'Matte' },
+            { category: 'greens', name: 'Olive', code: 'BCG-002', color: '#808000', finish: 'Satin' },
+            { category: 'greens', name: 'Mint', code: 'BCG-003', color: '#98FB98', finish: 'Eggshell' },
+            { category: 'greens', name: 'Forest Green', code: 'BCG-004', color: '#228B22', finish: 'Matte' },
+            { category: 'warm', name: 'Terracotta', code: 'BCW-101', color: '#E2725B', finish: 'Matte' },
+            { category: 'warm', name: 'Coral', code: 'BCW-102', color: '#FF7F50', finish: 'Satin' },
+            { category: 'warm', name: 'Peach', code: 'BCW-103', color: '#FFDAB9', finish: 'Eggshell' },
+            { category: 'warm', name: 'Desert Sand', code: 'BCW-104', color: '#C2B280', finish: 'Matte' },
+            { category: 'bold', name: 'Ruby Red', code: 'BCB-201', color: '#FF0000', finish: 'Gloss' },
+            { category: 'bold', name: 'Sunshine Yellow', code: 'BCB-202', color: '#FFD700', finish: 'Gloss' },
+            { category: 'bold', name: 'Royal Purple', code: 'BCB-203', color: '#800080', finish: 'Satin' },
+            { category: 'bold', name: 'Tangerine', code: 'BCB-204', color: '#FFA500', finish: 'Gloss' }
+        ];
+
+        // =============================================
+        // STATE MANAGEMENT
+        // =============================================
+        let selectedColors = [];
+        let recentColors = JSON.parse(localStorage.getItem('recentColors')) || [];
+        let comparisonColors = [];
+        let currentTryColor = null;
+
+        // =============================================
+        // INITIALIZATION
+        // =============================================
+        document.addEventListener('DOMContentLoaded', function() {
+            initPaintGallery();
+            initRecentColors();
+            initTryIt();
+            initCategoryFilters();
+        });
+
+        // =============================================
+        // PAINT GALLERY FUNCTIONS
+        // =============================================
+        function initPaintGallery() {
+            const grid = document.getElementById('paintGrid');
+            if (!grid) return;
+            
+            // Clear existing content
+            grid.innerHTML = '';
+            
+            // Add all paint colors
+            paintColors.forEach(paint => {
+                const card = createPaintCard(paint);
+                grid.appendChild(card);
+            });
+        }
+
+        function createPaintCard(paint) {
+            const card = document.createElement('div');
+            card.className = 'paint-card';
+            card.dataset.category = paint.category;
+            card.dataset.color = paint.color;
+            card.dataset.name = paint.name;
+            card.dataset.code = paint.code;
+            card.dataset.colorCode = paint.color;
+            card.dataset.finish = paint.finish;
+            
+            card.innerHTML = `
+                <div class="color-swatch" style="background: ${paint.color};"></div>
+                <div class="paint-info">
+                    <div class="paint-name">${paint.name}</div>
+                    <div class="paint-code">${paint.code}</div>
+                    <span class="paint-finish">${paint.finish}</span>
+                    <div class="paint-actions">
+                        <button class="compare-add" onclick="event.stopPropagation(); addToComparison('${paint.name}', '${paint.code}', '${paint.color}', '${paint.finish}')">➕ Compare</button>
+                    </div>
+                </div>
+                <div class="try-it-badge" onclick="event.stopPropagation(); tryColor('${paint.color}', '${paint.name}', '${paint.code}')">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                    </svg>
+                    Try It
+                </div>
+            `;
+            
+            card.addEventListener('click', (e) => {
+                if (e.target.tagName === 'BUTTON' || e.target.closest('.try-it-badge')) {
+                    return;
+                }
+                handlePaintClick(paint);
+                card.classList.toggle('selected');
+            });
+            
+            return card;
+        }
+
+        function handlePaintClick(paint) {
+            if (selectedColors.some(c => c.code === paint.code)) {
+                selectedColors = selectedColors.filter(c => c.code !== paint.code);
+            } else {
+                selectedColors.push(paint);
+                addToRecent(paint);
+            }
+            updateSelectedColorsDisplay();
+        }
+
+        // =============================================
+        // RECENT COLORS
+        // =============================================
+        function initRecentColors() {
+            const recentSection = document.getElementById('recentColors');
+            if (recentColors.length > 0) {
+                recentSection.style.display = 'block';
+                updateRecentColorsDisplay();
+            }
+        }
+
+        function addToRecent(paint) {
+            recentColors = recentColors.filter(c => c.code !== paint.code);
+            recentColors.unshift(paint);
+            if (recentColors.length > 8) recentColors.pop();
+            localStorage.setItem('recentColors', JSON.stringify(recentColors));
+            
+            document.getElementById('recentColors').style.display = 'block';
+            updateRecentColorsDisplay();
+        }
+
+        function updateRecentColorsDisplay() {
+            const grid = document.getElementById('recentGrid');
+            grid.innerHTML = '';
+            
+            recentColors.forEach(paint => {
+                const swatch = document.createElement('div');
+                swatch.className = 'recent-swatch';
+                swatch.style.background = paint.color;
+                swatch.title = `${paint.name} (${paint.code})`;
+                swatch.onclick = () => selectRecentColor(paint.code);
+                grid.appendChild(swatch);
+            });
+        }
+
+        function clearRecentColors() {
+            recentColors = [];
+            localStorage.removeItem('recentColors');
+            document.getElementById('recentColors').style.display = 'none';
+        }
+
+        function selectRecentColor(code) {
+            const cards = document.querySelectorAll('.paint-card');
+            cards.forEach(card => {
+                if (card.dataset.code === code) {
+                    card.click();
+                    card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            });
+        }
+
+        // =============================================
+        // COLOR COMPARISON
+        // =============================================
+        window.addToComparison = function(name, code, color, finish) {
+            if (comparisonColors.length >= 3) {
+                alert('You can compare up to 3 colors at a time.');
+                return;
+            }
+            comparisonColors.push({ name, code, color, finish });
+            updateComparisonSlots();
+        };
+
+        function updateComparisonSlots() {
+            for (let i = 0; i < 3; i++) {
+                const slot = document.getElementById(`slot${i}`);
+                if (i < comparisonColors.length) {
+                    const color = comparisonColors[i];
+                    slot.innerHTML = `
+                        <div class="comparison-swatch" style="background: ${color.color}"></div>
+                        <div class="slot-name">${color.name}</div>
+                        <div class="slot-code">${color.code}</div>
+                        <div class="slot-finish">${color.finish}</div>
+                    `;
+                    slot.classList.add('filled');
+                } else {
+                    slot.innerHTML = '<div class="slot-placeholder">Click to add color</div>';
+                    slot.classList.remove('filled');
+                }
+            }
+        }
+
+        window.selectComparisonSlot = function(index) {
+            if (index < comparisonColors.length) {
+                comparisonColors.splice(index, 1);
+                updateComparisonSlots();
+            }
+        };
+
+        window.clearComparison = function() {
+            comparisonColors = [];
+            updateComparisonSlots();
+        };
+
+        // =============================================
+        // "TRY IT" FEATURE
+        // =============================================
+        window.tryColor = function(colorCode, name, code) {
+            const overlay = document.getElementById('tryItOverlay');
+            overlay.style.background = colorCode;
+            overlay.style.opacity = '0.5';
+            currentTryColor = { colorCode, name, code };
+            
+            document.getElementById('currentTryColor').innerHTML = 
+                `<span style="color: ${colorCode};">${name} (${code})</span>`;
+            
+            updateTryItColorList(name, code, colorCode);
+        };
+
+        function updateTryItColorList(name, code, colorCode) {
+            const list = document.getElementById('tryItColorList');
+            
+            const existing = Array.from(list.children).find(
+                child => child.dataset.code === code
+            );
+            
+            if (!existing) {
+                const swatch = document.createElement('div');
+                swatch.className = 'try-it-color-item';
+                swatch.style.background = colorCode;
+                swatch.dataset.code = code;
+                swatch.dataset.name = name;
+                swatch.dataset.color = colorCode;
+                swatch.onclick = () => tryColor(colorCode, name, code);
+                swatch.title = name;
+                
+                if (list.children.length >= 12) {
+                    list.removeChild(list.lastChild);
+                }
+                
+                list.insertBefore(swatch, list.firstChild);
+            }
+            
+            document.querySelectorAll('.try-it-color-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            if (list.firstChild) list.firstChild.classList.add('active');
+        }
+
+        function initTryIt() {
+            const defaultColors = [
+                { name: 'Pure White', code: 'BCW-001', color: '#FFFFFF' },
+                { name: 'Navy Blue', code: 'BCB-002', color: '#000080' },
+                { name: 'Terracotta', code: 'BCW-101', color: '#E2725B' }
+            ];
+            
+            defaultColors.forEach(color => {
+                updateTryItColorList(color.name, color.code, color.color);
+            });
+        }
+
+        // =============================================
+        // CATEGORY FILTERS
+        // =============================================
+        function initCategoryFilters() {
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const category = this.dataset.category;
+                    const cards = document.querySelectorAll('.paint-card');
+                    
+                    cards.forEach(card => {
+                        if (category === 'all' || card.dataset.category === category) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        }
+
+        // =============================================
+        // SELECTED COLORS DISPLAY
+        // =============================================
+        function updateSelectedColorsDisplay() {
+            const container = document.getElementById('selectedColorsList');
+            if (selectedColors.length === 0) {
+                container.innerHTML = '<span class="selected-color-tag">No colors selected</span>';
+                return;
+            }
+            
+            container.innerHTML = selectedColors.map((color, index) => 
+                `<span class="selected-color-tag">
+                    ${color.name} (${color.code})
+                    <button class="remove-color" onclick="removeSelectedColor(${index})">×</button>
+                </span>`
+            ).join('');
+        }
+
+        window.removeSelectedColor = function(index) {
+            const color = selectedColors[index];
+            selectedColors.splice(index, 1);
+            
+            const card = document.querySelector(`[data-code="${color.code}"]`);
+            if (card) {
+                card.classList.remove('selected');
+            }
+            
+            updateSelectedColorsDisplay();
+        };
+
+        // =============================================
+        // WHATSAPP INQUIRY
+        // =============================================
+        window.sendPaintInquiryToWhatsApp = function() {
+            if (selectedColors.length === 0) {
+                alert('Please select at least one color.');
+                return;
+            }
+            
+            let message = '🖌️ *PAINT INQUIRY*\n\n';
+            selectedColors.forEach((color, i) => {
+                message += `${i+1}. ${color.name} (${color.code}) - ${color.finish}\n`;
+            });
+            message += `\nDelivery nationwide available. Please provide pricing.`;
+            
+            window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
+        };
+
+        // =============================================
+        // ECO-FRIENDLY INQUIRY
+        // =============================================
+        window.openEcoInquiry = function() {
+            const message = `🌱 *ECO-FRIENDLY PAINT INQUIRY*\n\nI'm interested in learning more about your sustainable paint options. Please send me information about:\n- Zero VOC paints\n- Eco-friendly options\n- Pricing and availability\n\nThank you!`;
+            window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
+        };
+
+        // =============================================
+        // CHAT FUNCTIONS
+        // =============================================
+        window.openTawkto = function() {
+            if (typeof Tawk_API !== 'undefined' && Tawk_API.maximize) {
+                Tawk_API.maximize();
+            } else {
+                alert('Tawk.to chat is loading. Please try again in a moment.');
+            }
+        };
+
+        window.openWhatsApp = function() {
+            window.open(`https://wa.me/${WHATSAPP_NUMBER}`, '_blank');
+        };
+
+        window.openMessenger = function() {
+            alert('Messenger chat would open here. Please configure your Facebook Page ID.');
+        };
+
+        // =============================================
+        // CALENDLY BOOKING
+        // =============================================
+        document.getElementById('calendlyLink')?.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.open(CALENDLY_URL, '_blank');
+        });
+
+        document.getElementById('consultationBtn')?.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.open(CALENDLY_URL, '_blank');
+        });
+
+        console.log('✅ All features initialized with Eco-Friendly section!');
+    </script>
+</body>
+</html>
